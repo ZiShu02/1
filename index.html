@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      body {
+        background: url(./90656844_p0.png);
+        background-position: center top;
+        background-position-y: -10vh;
+        margin-top: 20vh;
+        background-size: cover; /*图片始终填充满容器，且保证长宽比不变。图片如果有超出部分，则超出部分会被隐藏。*/
+        background-repeat: no-repeat;
+        display: flex;
+        flex-wrap: wrap;
+        background-attachment: fixed;
+        overflow-x: auto;
+      }
+      .a {
+        position: relative;
+        margin: 0 auto;
+        box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.7); /*为元素添加阴影  x偏移量 | y偏移量 | 阴影模糊半径 | 阴影扩散半径 | 阴影颜色 */
+        border-radius: 30px; /*边框圆角-圆角半径*/
+        backdrop-filter: blur(10px);
+        display: flex;
+        height: 60px;
+        width: 750px;
+        flex-wrap: wrap;
+      }
+      .a a {
+        width: 150px;
+        height: 60px;
+        line-height: 60px; /*行高*/
+        text-align: center; /*文本居中*/
+        text-decoration: none;
+        color: #fff;
+      }
+      .b {
+        position: absolute;
+        width: 150px;
+        height: 50px;
+        border-radius: 30px;
+        left: 0;
+        bottom: 5px;
+        background-color: rgba(255, 255, 255, 0.174);
+        z-index: -1;
+        transition: 0.5s;
+        flex-wrap: wrap;
+      }
+      .c {
+        height: 60px;
+        width: 100vw;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: right;
+        line-height: 60px;
+      }
+      .a a:nth-of-type(2):hover ~ .b {
+        left: 150px;
+      }
+      .a a:nth-of-type(3):hover ~ .b {
+        left: 300px;
+      }
+      .a a:nth-of-type(4):hover ~ .b {
+        left: 450px;
+      }
+      .a a:nth-of-type(5):hover ~ .b {
+        left: 600px;
+      }
+      .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -0.15em;
+        fill: currentColor;
+        overflow: hidden;
+      }
+      .bilibili{
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="a" style="flex-wrap: wrap">
+      <a href="#">首页</a>
+      <a href="https://www.bilibili.com/"><svg class="icon bilibili" aria-hidden="true">
+        <use xlink:href="#icon-bilibili"></use>
+    </svg><span>BiLiBiLi</span></a> 
+      <a href="https://www.pixiv.net/">Pixiv</a>
+      <a href="https://developer.mozilla.org/zh-CN/">Mdn</a>
+      <a href="https://web.qianguyihao.com/">千古</a>
+      <div class="b"></div>
+    </div>
+    <div class="c" style="margin-top: 400px;">
+      <p>版本所属</p>
+      <p>KyouRyou</p>
+    </div>
+    <script src="//at.alicdn.com/t/font_3338974_q93umoo69c.js"></script>
+  </body>
+</html>
